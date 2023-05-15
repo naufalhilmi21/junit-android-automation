@@ -56,4 +56,12 @@ public class TransferPage extends BasePage {
     public void validatePin() {
         waitForVisibilityOf(masukkanPinText, 5);
     }
+
+    public void submitPin(String pin) {
+        validatePin();
+        for (char c : pin.toCharArray()) {
+            driver.findElement(MobileBy.xpath("//*[@resource-id = '" + c + "']")).click();
+        }
+        delay(1000);
+    }
 }

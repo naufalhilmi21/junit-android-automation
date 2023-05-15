@@ -25,6 +25,6 @@ public class ExampleTest extends TestInstrument {
         blu.transferPage().validateAccountName("NAUFAL HILMI");
         blu.transferPage().submitTransfer("10000");
         blu.transferPage().confirmTransfer();
-        blu.transferPage().validatePin();
+        blu.transferPage().submitPin("482610");
     }
 }
